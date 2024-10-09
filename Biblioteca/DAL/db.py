@@ -11,7 +11,7 @@ try:
         
         cursor = cnx.cursor()
         #cursor.execute("SHOW DATABASES")
-        cursor.execute("SELECT * FROM editorial")
+        cursor.execute("SELECT * FROM usuarios_1")
         for base in cursor:
             print(base)
         #cnx.closed
