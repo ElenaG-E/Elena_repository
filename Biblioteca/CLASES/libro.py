@@ -1,5 +1,5 @@
 import isbnlib #Descargue e importe esta librería de python.
-import Autor
+import autor
 
 class Libro():
     def __init__(self, titulo, isbn, id_autor):
