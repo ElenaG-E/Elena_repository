@@ -1,30 +1,38 @@
-from libro import libro, isbn, 
+from libro import libro
 
-class Biblioteca():
+class Biblioteca:
     def __init__(self, id_biblio, nom_biblio, dir_biblio, tel_biblio):
         self.id_biblio = id_biblio
         self.nom_biblio = nom_biblio
         self.dir_biblio = dir_biblio
         self.tel_biblio = tel_biblio
-        self.libros = []
-        
-    def agregar_libro(self, libro):
-        self.libros.append(libro)
-
-    def buscar_libro(self, identificar):
-         for libro in self.libros:
-            if libro.isbn == identificar:
+        self.__libros = []
+    
+    def buscar_libro(self, isbn):
+        for libro in self.__libros:
+            if libro.isbn == isbn:
                 return libro
             return None
+    
+    def prestar_libro(self, isbn):
+        libro = self.buscar_libro(isbn)
+        if libro:
+            if not libro.prestado:
+                libro.prestado = True
+                print(f"El libro '{libro.titulo}' esta disponible")
+            else:
+                print(f"El libro '{libro.titulo}' no esta disponible")
+        else:
+            print("Libro no encontrado")
 
-    def prestar_libro(self):
-       libro = self.buscar_libro(isbn)
-       if libro:
-           if libro.disponible:
-               libro.disponible = False
-               return f"El libro '{libro, titulo}' ha sido prestado"
+    def devolver_libro(self, isbn):
+        libro = self.buscar_libro(isbn)
+        if libro:
+            if libro.prestado:
+                libro.prestado = False
+                print(f"El libro '{libro.titulo}' fue devuelto")
+            else:
+                print(f"El libro '{libro.titulo}' no esta devuelto")
 
-    def devolver_libro(self):
-        pass
-
-
+        else:
+            print("Libro no encontrado")

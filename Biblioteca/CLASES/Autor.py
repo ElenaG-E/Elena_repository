@@ -1,17 +1,18 @@
-from datetime import datetime
-import paises
-
-class autor(paises):
-    def __init__(self, id_autor, nom_autor, seud_autor, cod_pais, fec_nac, fec_def):
-        super().__init__(cod_pais)
+class Autor():
+    def __init__(self, id_autor, nombre_autor, nacionalidad, cod_pais):
         self.id_autor = id_autor
-        self.nom_autor = nom_autor
-        self.seud_autor = seud_autor
+        self.nombre_autor = nombre_autor
+        self.nacionalidad = nacionalidad
         self.cod_pais = cod_pais
-        self.fec_nac = fec_nac
-        self.fec_def = fec_def
-    
-    def control_de_fechas(fecha):
-        fecha_datetime = datetime.strptime(fecha, "%d/%m/%Y")
-        fecha_string = fecha_datetime.strftime("%Y-%m-%d")
-        return fecha_string
+
+    def obtener_datos(self):
+        return {
+            "ID Autor": self.id_autor,
+            "Nombre Autor": self.nombre_autor,
+            "Nacionalidad": self.nacionalidad,
+            "Codigo Pais": self.cod_pais
+             
+        }
+
+autor = Autor(1, "Gabriel García Márquez", "Colombiano", "COL")
+print(autor.obtener_datos())  # Muestra los detalles en formato de diccionario
