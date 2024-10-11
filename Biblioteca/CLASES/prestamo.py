@@ -12,7 +12,7 @@ class Prestamo(detallelibro, usuario):
         self.fec_devuelto = fec_devuelto
         self.ejemplares_solicitados = ejemplares_solicitados
 
-    def calcular_fechas_devolucion(self, dias_prestamo=7):
+    def calcular_fechas_dev(self, dias_prestamo=7):
     
         if self.ejemplares_solicitados <= self.ejemplares_disponibles:
             print(f"Préstamo aceptado. Calculando fecha de devolución para {dias_prestamo} días hábiles...")
@@ -36,7 +36,7 @@ class Prestamo(detallelibro, usuario):
         else:
             print(f"No hay suficientes ejemplares disponibles. Solicitaste {self.ejemplares_solicitados}, pero solo hay {self.ejemplares_disponibles} disponibles.")
 
-    def actualizar_disponibilidad_prestamo(self):
+    def actualizar_disp_prest(self):
         """
         Método para actualizar la disponibilidad de ejemplares tras realizar un préstamo.
         """
@@ -46,7 +46,7 @@ class Prestamo(detallelibro, usuario):
         else:
             print(f"No se pudo realizar el préstamo. Solo hay {self.ejemplares_disponibles} ejemplares disponibles.")
 
-    def actualizar_disponibilidad_devolucion(self, ejemplares_devueltos):
+    def actualizar_disp_dev(self, ejemplares_devueltos):
         """
         Método para actualizar la disponibilidad de ejemplares tras la devolución.
         """
