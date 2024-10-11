@@ -1,4 +1,4 @@
-import paises
+from paises import codigo_pais
 
 class Autor():
     def __init__(self, id_autor, nombre_autor, nacionalidad, codigo_pais):
