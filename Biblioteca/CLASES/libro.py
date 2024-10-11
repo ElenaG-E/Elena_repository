@@ -1,4 +1,4 @@
-from autor import autor
+import autor
 import isbnlib  
 
 class libro:
