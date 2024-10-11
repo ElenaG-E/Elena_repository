@@ -13,7 +13,6 @@ class Editorial:
             return f"El correo '{self.__correo_contacto}' es invalido"
     
     def cambiar_correo(self, nuevo_correo):
-        self.__correo(self, nuevo_correo):
-        self.__correo = nuevo_correo
+        self.nuevo_correo = nuevo_correo
         return self.validar_correo()
     

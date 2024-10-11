@@ -1,4 +1,4 @@
-from libro import libro
+import libro
 
 class Biblioteca:
     def __init__(self, id_biblio, nom_biblio, dir_biblio, tel_biblio):
@@ -14,7 +14,7 @@ class Biblioteca:
                 return libro
             return None
     
-    def prestar_libro(self, isbn):
+    def prestar_libro(self, isbn, titulo):
         libro = self.buscar_libro(isbn)
         if libro:
             if not libro.prestado:
