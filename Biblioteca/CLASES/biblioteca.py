@@ -6,3 +6,14 @@ class Biblioteca():
         self.nom_biblio = nom_biblio
         self.dir_biblio = dir_biblio
         self.tel_biblio = tel_biblio
+    
+    def buscar_libro(identificar):
+        pass
+
+    def prestar_libro(self):
+        pass
+
+    def devolver_libro(self):
+        pass
+
+
