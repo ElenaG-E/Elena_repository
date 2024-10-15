@@ -1,7 +1,7 @@
 import autor
 import isbnlib  
 
-class libro:
+class Libro:
     def __init__(self, titulo, isbn, id_autor):
         super().__init__(id_autor)
         self.titulo = titulo  # Atributo título
