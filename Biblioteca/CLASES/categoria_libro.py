@@ -1,6 +1,6 @@
-import tipo_categoria
+import Tipo_categoria
 
-class Categoria_libros(tipo_categoria):
+class Categoria_libros(Tipo_categoria):
     def __init__(self, id_catlib, id_tipcat, cat_lib):
         super().__init__(id_tipcat)
         self.id_catlib = id_catlib

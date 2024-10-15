@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 import usuario
-import detallelibro
+import Detallelibro
 
 class Prestamo(detallelibro, usuario):
     def __init__(self, id_prestamo, isbn, rut_usuario, fec_prestamo, fec_devolucion, fec_devuelto, ejemplares_solicitados):

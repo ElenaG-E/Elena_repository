@@ -1,4 +1,4 @@
-import autor
+import Autor
 import isbnlib  
 
 class Libro:
@@ -14,7 +14,7 @@ class Libro:
     
 # Solicitar el isbn al usuario
 isbn = input("Ingresa número isbn: ")
-libro = libro("Ejemplo de Título", isbn, 1)  # Instanciar el libro
+libro = Libro("Ejemplo de Título", isbn, 1)  # Instanciar el libro
 valido = libro.validar_isbn()  # Validar el isbn
 
 # Imprimir el resultado de la validación

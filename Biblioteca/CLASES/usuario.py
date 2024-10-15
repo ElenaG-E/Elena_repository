@@ -1,8 +1,8 @@
-import paises
-import tipousuario
+import Paises
+import Tipo_Usuario
 from rut_chile import rut_chile
 
-class Usuario (paises, tipousuario):
+class Usuario (Paises, Tipo_usuario):
     def __init__(self, rut_usuario, nom_usuario, email_usuario, tel_usuario, codigo_pais, habilitado, id_tipo, fecha_creacion):
         self.rut_usuario = rut_usuario
         self.nom_usuario = nom_usuario

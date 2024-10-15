@@ -1,4 +1,4 @@
-import paises
+import Paises
 
 class Editorial:
     def __init__(self, id_editorial, nom_editorial, codigo_pais, telefono_contacto, email_contacto):
