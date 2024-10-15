@@ -1,5 +1,5 @@
 import Paises
-import Tipo_Usuario
+import Tipo_usuario
 from rut_chile import rut_chile
 
 class Usuario (Paises, Tipo_usuario):

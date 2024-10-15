@@ -1,11 +1,11 @@
 from datetime import datetime, timedelta
-import usuario
-import Detallelibro
+import Usuario
+import Detalle_libro
 
-class Prestamo(detallelibro, usuario):
+class Prestamo(Detalle_libro, Usuario):
     def __init__(self, id_prestamo, isbn, rut_usuario, fec_prestamo, fec_devolucion, fec_devuelto, ejemplares_solicitados):
-        detallelibro.__init__(self, isbn)  # Heredando ISBN de la clase detallelibro
-        usuario.__init__(self, rut_usuario)  # Heredando usuario
+        Detalle_libro.__init__(self, isbn)  # Heredando ISBN de la clase detallelibro
+        Usuario.__init__(self, rut_usuario)  # Heredando usuario
         self.id_prestamo = id_prestamo
         self.fec_prestamo = fec_prestamo
         self.fec_devolucion = fec_devolucion
